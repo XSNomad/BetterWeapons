@@ -1,0 +1,25 @@
+#nullable enable
+using HBS.Logging;
+
+namespace BetterWeapons
+{
+    public class BetterLogger
+    {
+        public readonly BetterLevelLogger Error;
+        public readonly BetterLevelLogger Warning;
+        public readonly BetterLevelLogger Info;
+        public readonly BetterLevelLogger? Debug;
+
+        public BetterLogger(ILog log, LogLevel level)
+        {
+            Error = new BetterLevelLogger(log, LogLevel.Error);
+            Warning = new BetterLevelLogger(log, LogLevel.Warning);
+            Info = new BetterLevelLogger(log, LogLevel.Log);
+            if (level > LogLevel.Debug)
+            {
+                return;
+            }
+            Debug = new BetterLevelLogger(log, LogLevel.Debug);
+        }
+    }
+}
