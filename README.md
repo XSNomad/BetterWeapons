@@ -1,7 +1,3 @@
-Here’s a GitHub-ready **README.md** you can drop in. It’s structured, skimmable, and includes everything we changed—plus clear credit to the original author.
-
----
-
 # Better Weapons
 
 > A modern revival of **BT-WeaponRealizer** for HBS BATTLETECH.
